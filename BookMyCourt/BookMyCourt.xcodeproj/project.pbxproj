@@ -32,6 +32,7 @@
 		7946F72F2073080400E3C9F8 /* Sawyers Whitewash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */; };
 		7946F7302073080400E3C9F8 /* Sawyers Whitewash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */; };
 		7946F73120730F1500E3C9F8 /* Sawyers Whitewash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */; };
+		BAC95EB520870ADD008D1300 /* CourtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC95EB420870ADD008D1300 /* CourtData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		7946F7292072FEFC00E3C9F8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7946F72A2072FEFC00E3C9F8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sawyers Whitewash.otf"; sourceTree = "<group>"; };
+		BAC95EB420870ADD008D1300 /* CourtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,8 @@
 		3F563F3420378DAD009F8807 /* BookMyCourt */ = {
 			isa = PBXGroup;
 			children = (
+				BAC95EB320870AA6008D1300 /* DataLayer */,
+				BAC95EB220870A95008D1300 /* BusinessLogic */,
 				3F9D26BB2053914500B28002 /* Models */,
 				3F563F3520378DAD009F8807 /* AppDelegate.swift */,
 				7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */,
@@ -199,6 +203,21 @@
 				731B0A012072E500003958F4 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAC95EB220870A95008D1300 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		BAC95EB320870AA6008D1300 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BAC95EB420870ADD008D1300 /* CourtData.swift */,
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9D26C5205394AE00B28002 /* TimeSlotModel.swift in Sources */,
+				BAC95EB520870ADD008D1300 /* CourtData.swift in Sources */,
 				3F563F3A20378DAD009F8807 /* NewBookingViewController.swift in Sources */,
 				3F9D26BD2053918F00B28002 /* UserModel.swift in Sources */,
 				3F9D26C32053949800B28002 /* AvailabilityModel.swift in Sources */,

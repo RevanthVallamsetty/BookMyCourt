@@ -54,6 +54,7 @@ class AvailabilityViewController:  UIViewController,UITableViewDataSource,UITabl
 //            }
 //
 //        }
+        print(CourtData.getCourtData())
         var d1=DataFetch()
         d1.loadAvailabilityData()
     }

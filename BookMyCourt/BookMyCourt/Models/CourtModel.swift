@@ -9,7 +9,7 @@
 import Foundation
 
 class Court{
-
+    
     var courtID:Int
     var CourtLocation:String
     
@@ -17,15 +17,16 @@ class Court{
         self.courtID = courtID
         self.CourtLocation = CourtLocation
     }
+    
     init() {
         self.courtID = 0
         self.CourtLocation = ""
     }
-
-        static func parseClassName() -> String
-        {
+    
+    static func parseClassName() -> String
+    {
         return "Court"
         
-        }
-
+    }
+    
 }

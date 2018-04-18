@@ -14,6 +14,13 @@ class  Availability{
     var court:Court
     var isAvailable:Bool
     
+    init() {
+        self.dateID = Date.init()
+        self.timeSlot = TimeSlot()
+        self.court = Court()
+        self.isAvailable = true
+    }
+    
     init(dateID:Date,timeSlot:TimeSlot,court:Court,isAvailable:Bool) {
         self.dateID = dateID
         self.timeSlot = timeSlot
