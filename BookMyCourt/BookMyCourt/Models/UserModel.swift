@@ -16,5 +16,4 @@ class Users: PFObject, PFSubclassing{
     @NSManaged var userID:String
     @NSManaged var phoneNumber:String
     @NSManaged var rememberMe:Bool
-    @NSManaged var bookingID:[Int]
 }

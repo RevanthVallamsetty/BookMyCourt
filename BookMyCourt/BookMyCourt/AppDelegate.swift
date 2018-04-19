@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     static var selected:Availability=Availability()
     static var data:DataFetch=DataFetch()
+    static var enteredUserID:String=""
+    static var enteredPhoneNo:String=""
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         Court.registerSubclass()
         TimeSlot.registerSubclass()

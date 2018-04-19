@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class NewBookingViewController: UIViewController {
 
     @IBOutlet weak var Txt919Number: UITextField!
@@ -56,20 +57,30 @@ class NewBookingViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        var entID = Txt919Number.text!
-        var entPH = TxtPhoneNumber.text!
+        var entID = Txt919Number.text
+        var entPH = TxtPhoneNumber.text
         var res:Bool = false
+        if entID! != nil && entPH! != nil
+        {
         for user in AppDelegate.data.users
         {
-            if entID == String(describing: user["UserID"]) && entID == String(describing: user["PhoneNumber"])
+            if entID! == String(describing: user["UserID"]) && entID! == String(describing: user["PhoneNumber"])
             {
                 res=true
+                AppDelegate.enteredUserID=entID!
+                AppDelegate.enteredPhoneNo=entPH!
+                
             }
             else
             {
                 res=false
             }
          }
+        }
+        else
+        {
+            res=false
+        }
         return res
     }
     

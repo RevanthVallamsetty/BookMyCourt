@@ -27,6 +27,7 @@
 		73ACD9DE20858B0100D33C0E /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ACD9DD20858B0100D33C0E /* DataFetch.swift */; };
 		73BEE1952037952F00136CF1 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BEE1942037952F00136CF1 /* MyBookingsViewController.swift */; };
 		73BEE1972037957200136CF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BEE1962037957200136CF1 /* SettingsViewController.swift */; };
+		73CE818F208929780045633D /* DataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CE818E208929780045633D /* DataOperations.swift */; };
 		7946F72B2072FEFC00E3C9F8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7946F7292072FEFC00E3C9F8 /* Parse.framework */; };
 		7946F72C2072FEFC00E3C9F8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7946F72A2072FEFC00E3C9F8 /* Bolts.framework */; };
 		7946F72F2073080400E3C9F8 /* Sawyers Whitewash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */; };
@@ -80,6 +81,7 @@
 		73ACD9DD20858B0100D33C0E /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
 		73BEE1942037952F00136CF1 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		73BEE1962037957200136CF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		73CE818E208929780045633D /* DataOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOperations.swift; sourceTree = "<group>"; };
 		7946F7292072FEFC00E3C9F8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7946F72A2072FEFC00E3C9F8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7946F72D2073080400E3C9F8 /* Sawyers Whitewash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sawyers Whitewash.otf"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3F9D26C4205394AE00B28002 /* TimeSlotModel.swift */,
 				731B0A0D2072E913003958F4 /* BookingModel.swift */,
 				73ACD9DD20858B0100D33C0E /* DataFetch.swift */,
+				73CE818E208929780045633D /* DataOperations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				BAC95EB520870ADD008D1300 /* CourtData.swift in Sources */,
 				3F563F3A20378DAD009F8807 /* NewBookingViewController.swift in Sources */,
 				3F9D26BD2053918F00B28002 /* UserModel.swift in Sources */,
+				73CE818F208929780045633D /* DataOperations.swift in Sources */,
 				3F9D26C32053949800B28002 /* AvailabilityModel.swift in Sources */,
 				3F563F3620378DAD009F8807 /* AppDelegate.swift in Sources */,
 				73BEE1952037952F00136CF1 /* MyBookingsViewController.swift in Sources */,

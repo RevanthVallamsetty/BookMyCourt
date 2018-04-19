@@ -7,18 +7,14 @@
 //
 
 import Foundation
-
-class TimeSlot {
-    var timeSlotID:Int
-    var timing:String
+import Parse
+class TimeSlot:PFObject, PFSubclassing {
+    static func parseClassName() -> String {
+        return "TimeSlot"
+    }
     
-    init(timeslot:Int,timing:String) {
-        self.timeSlotID = timeslot
-        self.timing = timing
-    }
-    init()
-    {
-        timeSlotID=0
-        timing=""
-    }
+    @NSManaged var timeSlotID:Int
+    @NSManaged var timing:String
+    
+    
 }
