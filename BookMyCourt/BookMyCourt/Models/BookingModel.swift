@@ -7,17 +7,18 @@
 //
 
 import Foundation
-class Booking
+import Parse
+class Booking:PFObject, PFSubclassing
 {
-    var bookingID:Int
-    var dateID:Date
-    var timeSlot:TimeSlot
-    var court:Court
-
-    init(bookingID:Int,dateID:Date,timeSlot:TimeSlot,court:Court) {
-     self.bookingID=bookingID
-     self.dateID=dateID
-     self.timeSlot=timeSlot
-      self.court=court
+    static func parseClassName() -> String {
+       return "Booking"
     }
+    
+    @NSManaged var bookingID:Int
+    @NSManaged var dateID:Date
+    @NSManaged var timeSlotID:Int
+    @NSManaged var courtID:Int
+    @NSManaged var userID:String
+
+    
 }

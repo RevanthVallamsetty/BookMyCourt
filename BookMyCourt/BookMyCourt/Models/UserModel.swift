@@ -7,17 +7,14 @@
 //
 
 import Foundation
-
-class User {
-    var studentID:String
-    var phoneNumber:String
-    var rememberMe:Bool
-    var booking:Booking
-    
-    init(studentID:String,phoneNumber:String,rememberMe:Bool,booking:Booking) {
-        self.studentID = studentID
-        self.phoneNumber = phoneNumber
-        self.rememberMe = rememberMe
-        self.booking = booking
+import Parse
+class Users: PFObject, PFSubclassing{
+    static func parseClassName() -> String {
+       return "Users"
     }
+    
+    @NSManaged var userID:String
+    @NSManaged var phoneNumber:String
+    @NSManaged var rememberMe:Bool
+    @NSManaged var bookingID:[Int]
 }

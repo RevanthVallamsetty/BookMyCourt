@@ -7,24 +7,13 @@
 //
 
 import Foundation
-
-class  Availability{
-    var dateID:Date
-    var timeSlot:TimeSlot
-    var court:Court
-    var isAvailable:Bool
-    
-    init() {
-        self.dateID = Date.init()
-        self.timeSlot = TimeSlot()
-        self.court = Court()
-        self.isAvailable = true
+import Parse
+class Availability:PFObject, PFSubclassing{
+    static func parseClassName() -> String {
+       return "Availability"
     }
-    
-    init(dateID:Date,timeSlot:TimeSlot,court:Court,isAvailable:Bool) {
-        self.dateID = dateID
-        self.timeSlot = timeSlot
-        self.court = court
-        self.isAvailable = isAvailable
-    }
+   @NSManaged var courtID:Int
+   @NSManaged var dateID:Date
+   @NSManaged var timeSlotID:Int
+   @NSManaged var isAvailable:Bool
 }

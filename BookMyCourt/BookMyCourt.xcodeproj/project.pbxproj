@@ -68,10 +68,9 @@
 		3F563F5720378DAE009F8807 /* BookMyCourtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMyCourtUITests.swift; sourceTree = "<group>"; };
 		3F563F5920378DAE009F8807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9D26BC2053918F00B28002 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		3F9D26C02053948200B28002 /* CourtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtModel.swift; sourceTree = "<group>"; };
+		3F9D26C02053948200B28002 /* CourtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtModel.swift; sourceTree = "<group>"; tabWidth = 5; };
 		3F9D26C22053949800B28002 /* AvailabilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityModel.swift; sourceTree = "<group>"; };
 		3F9D26C4205394AE00B28002 /* TimeSlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotModel.swift; sourceTree = "<group>"; };
-		731B0A012072E500003958F4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		731B0A032072E51B003958F4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		731B0A052072E531003958F4 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		731B0A072072E544003958F4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -125,6 +124,7 @@
 				3F563F4B20378DAD009F8807 /* BookMyCourtTests */,
 				3F563F5620378DAE009F8807 /* BookMyCourtUITests */,
 				3F563F3320378DAD009F8807 /* Products */,
+				7946F7292072FEFC00E3C9F8 /* Parse.framework */,
 				731B0A002072E500003958F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -198,9 +198,7 @@
 				731B0A072072E544003958F4 /* libsqlite3.tbd */,
 				731B0A052072E531003958F4 /* libstdc++.6.tbd */,
 				7946F72A2072FEFC00E3C9F8 /* Bolts.framework */,
-				7946F7292072FEFC00E3C9F8 /* Parse.framework */,
 				731B0A032072E51B003958F4 /* Bolts.framework */,
-				731B0A012072E500003958F4 /* Parse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

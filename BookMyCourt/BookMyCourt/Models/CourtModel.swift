@@ -7,26 +7,16 @@
 //
 
 import Foundation
+import Parse
 
-class Court{
+class Court:PFObject, PFSubclassing{
     
-    var courtID:Int
-    var CourtLocation:String
-    
-    init(courtID:Int,CourtLocation:String) {
-        self.courtID = courtID
-        self.CourtLocation = CourtLocation
-    }
-    
-    init() {
-        self.courtID = 0
-        self.CourtLocation = ""
-    }
+    @NSManaged var courtID:Int
+    @NSManaged var CourtLocation:String
     
     static func parseClassName() -> String
     {
         return "Court"
-        
     }
     
 }

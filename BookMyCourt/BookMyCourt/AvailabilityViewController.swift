@@ -10,68 +10,74 @@ import UIKit
 import Parse
 
 class AvailabilityViewController:  UIViewController,UITableViewDataSource,UITableViewDelegate {
-    let days = ["DAYS","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday"]
-    let availablity = ["STATUS","Available","Not Available","Available","Not Available","Available","Not Available","Available"]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+    }
+    @IBOutlet weak var courtsAvailabilityTV: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.data.loadAllData()
+       
+    }
+    
+    @IBAction func BTNCheck(_ sender: UIButton) {
+        self.courtsAvailabilityTV.reloadData()
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courts.count
+
+        return AppDelegate.data.availabilities.count
+    }
+    func isEqual<T: Equatable>(type: T.Type, a: Any, b: Any) -> Bool? {
+        guard let a = a as? T, let b = b as? T else { return nil }
+        
+        return a == b
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityList")!
-        cell.textLabel?.text = "\(courts[indexPath.row].courtID)"
-        cell.detailTextLabel?.text = courts[indexPath.row].CourtLocation
-
+        let availability=AppDelegate.data.availabilities[indexPath.row]
+        var courtL=""
+        var time=""
+        
+        for court in AppDelegate.data.courts{
+            if isEqual(type:Int.self,a:availability["CourtID"],b:court["CourtID"])! {
+                courtL=court.CourtLocation
+                break
+            }
+    
+        }
+        for timeSlot in AppDelegate.data.timeslots{
+            
+            if isEqual(type:Int.self,a:timeSlot["TimeSlotID"],b:availability["TimeSlotID"])!
+            {
+                time = String(describing: timeSlot["Timing"]!)
+                break
+            }
+        
+        }
+        cell.textLabel?.text=courtL
+        cell.detailTextLabel?.text=time
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppDelegate.loc=courts[indexPath.row].CourtLocation        
+       AppDelegate.selected = AppDelegate.data.availabilities[indexPath.row]
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        let query = PFQuery(className:"Court")
-//        query.findObjectsInBackground {
-//            (objects: [PFObject]?, error: Error?) -> Void in
-//            if error == nil
-//            {
-//                for i in 0..<objects!.count{
-//                    self.courts.append(Court(courtID: objects![i]["CourtID"] as! Int, CourtLocation: objects![i]["CourtLocation"] as! String))
-//                }
-//
-//                //                print(self.courts[0].CourtLocation+"-------")
-//                self.courtsAvailabilityTV.reloadData()
-//            }
-//            else {
-//                // Log details of the failure
-//                print("Oops \(error!)")
-//
-//            }
-//
-//        }
-        print(CourtData.getCourtData())
-        var d1=DataFetch()
-        d1.loadAvailabilityData()
-    }
-    @IBOutlet weak var courtsAvailabilityTV: UITableView!
-    
-    var courts:[Court] = [];
-    var court:Court = Court();
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
 
 }
 

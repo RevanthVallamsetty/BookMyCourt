@@ -23,10 +23,17 @@ class CourtData {
             if error == nil
             {
                 //print(objects)
-                for court in objects!{
-                    courtArr.append(Court(courtID: court["CourtID"] as! Int,CourtLocation: court["CourtLocation"] as! String))
-                    //print(court["CourtLocation"] as! String)
-                }
+//                for court in objects!{
+//                    var newc=Court()
+//                    newc.courtID=court["CourtID"] as! Int
+//                    newc.CourtLocation=court["CourtLocation"] as! String
+//                    courtArr.append(newc)
+//                    //print(court["CourtLocation"] as! String)
+//                }
+                var newc=objects![0] as! Court
+                //                                newc.courtID=court["CourtID"] as! Int
+                //                                newc.CourtLocation=court["CourtLocation"] as! String
+              courtArr.append(newc)
                 print("******")
                 print(courtArr[0].CourtLocation)
                 

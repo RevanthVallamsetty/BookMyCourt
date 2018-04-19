@@ -13,10 +13,19 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var loc=""
-
+    static var selected:Availability=Availability()
+    static var data:DataFetch=DataFetch()
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        Court.registerSubclass()
+        TimeSlot.registerSubclass()
+        Availability.registerSubclass()
+        Booking.registerSubclass()
+        Users.registerSubclass()
+        return true
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+     
         let configuration = ParseClientConfiguration {
             $0.applicationId = "MnEflPFKVW0f8YBisHoKccdizeNiVdrbY3EddY4C";
             $0.clientKey = "LRZNhOsusktJWllnviImMgODh3lIXKgcpVfm6D42"
